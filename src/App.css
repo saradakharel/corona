@@ -3,15 +3,15 @@
   padding: 30px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .confirmed,
 .recovered,
 .deaths {
-  /* width: 30%; */
   text-align: center;
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,13 +33,13 @@
 }
 
 @media screen and (max-width: 589px) {
-  .site-card-wrapper {
+  /* .site-card-wrapper {
     flex-direction: column;
-  }
+  } */
   .confirmed,
 .recovered,
 .deaths {
-  width: 90%;
+  width: 150px;
   margin: auto;
 }
 }
