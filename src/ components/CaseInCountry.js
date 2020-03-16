@@ -25,12 +25,12 @@ function CaseInCountry({ currentCountry }) {
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ background: 'green', color: 'white' }} title="Recovered" bordered={false}>
+            <Card title="Recovered" bordered={false}>
               {caseInCountry.recovered.value}
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ background: '#cc4747', color: 'white' }} title="Deaths" bordered={false}>
+            <Card title="Deaths" bordered={false}>
               {caseInCountry.deaths.value}
             </Card>
           </Col>

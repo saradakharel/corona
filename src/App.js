@@ -19,12 +19,12 @@ function App() {
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ background: 'green', color: 'white' }} title="Recovered" bordered={false}>
+            <Card title="Recovered" bordered={false}>
               <RecoveredCases />
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ background: '#cc4747', color: 'white' }} title="Deaths" bordered={false}>
+            <Card title="Deaths" bordered={false}>
               <Deaths />
             </Card>
           </Col>
