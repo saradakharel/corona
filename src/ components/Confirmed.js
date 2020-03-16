@@ -15,8 +15,9 @@ export function ConfirmedCases() {
   const totalConfirmedCases = confirmedCases.reduce((final, cv) => final + cv.confirmed, 0)
   console.log({ totalConfirmedCases })
   return (
-    <>
-      {totalConfirmedCases}
-    </>
+    <div className="confirmed">
+      <label>Confirmed</label>
+      <p>{totalConfirmedCases}</p>
+    </div>
   );
 }

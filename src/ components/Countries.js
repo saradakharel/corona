@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import CaseInCountry from './CaseInCountry'
-import { Select } from 'antd';
 
-const { Option } = Select;
 
 
 function Countries() {
@@ -19,21 +17,19 @@ function Countries() {
     fetchCountries()
   }, [])
 
-  function onChange(value) {
-    setCountry(value)
-  }
+
   if (loading) return <h1>Loading....</h1>
   return (
     <div className="countries">
-      <Select style={{ display: 'block', width: '20%', margin: '1rem auto' }} value={country} onChange={onChange}>
+      <select style={{ display: 'block', width: '20%', margin: '1rem auto' }} value={country} onChange={(e) => setCountry(e.target.value)}>
         {Object.entries(countries).map(([key]) =>
-          <Option key={key} value={key}>
+          <option key={key} value={key}>
             {key}
-          </Option>
+          </option>
         )}
-      </Select>
+      </select>
       <CaseInCountry currentCountry={country} />
-    </div>
+    </div >
   )
 }
 

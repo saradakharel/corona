@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Card, Col, Row, Alert } from 'antd';
+import { Alert } from 'antd';
 function CaseInCountry({ currentCountry }) {
 
   const [caseInCountry, setCaseInCountry] = useState(null)
@@ -18,25 +18,21 @@ function CaseInCountry({ currentCountry }) {
     <div>
       <h1 style={{ textAlign: 'center' }}>Corona case in <span style={{ color: 'blue' }}>{currentCountry}</span></h1>
       <div className="site-card-wrapper">
-        <Row gutter={16}>
-          <Col span={8}>
-            <Card title="Confirmed" bordered={false}>
-              {caseInCountry.confirmed.value}
-            </Card>
-          </Col>
-          <Col span={8}>
-            <Card title="Recovered" bordered={false}>
-              {caseInCountry.recovered.value}
-            </Card>
-          </Col>
-          <Col span={8}>
-            <Card title="Deaths" bordered={false}>
-              {caseInCountry.deaths.value}
-            </Card>
-          </Col>
-        </Row>
-      </div>
-    </div>
+        <div className="confirmed">
+          <label>Confirmed</label>
+          <p>{caseInCountry.confirmed.value}</p>
+        </div>
+
+        <div className="recovered">
+          <label>Recovered</label>
+          <p>{caseInCountry.recovered.value}</p>
+        </div>
+        <div className="deaths">
+          <label>Recovered</label>
+          <p>{caseInCountry.deaths.value}</p>
+        </div>
+      </div >
+    </div >
   )
 }
 

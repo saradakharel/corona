@@ -14,8 +14,9 @@ export function RecoveredCases() {
   if (loading) return <h1>Loading.....</h1>
   const totalRecoveredCases = recoveredCases.reduce((final, cv) => final + cv.recovered, 0)
   return (
-    <>
-      {totalRecoveredCases}
-    </>
+    <div className="recovered">
+      <label>Recovered</label>
+      <p>{totalRecoveredCases}</p>
+    </div>
   );
 }

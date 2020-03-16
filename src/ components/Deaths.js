@@ -15,9 +15,10 @@ export function Deaths() {
   const totalDeaths = deaths.reduce((final, cv) => final + cv.deaths, 0)
 
   return (
-    <>
-      {totalDeaths}
-    </>
+    <div className="deaths">
+      <label>Deaths</label>
+      <p>{totalDeaths}</p>
+    </div>
   );
 }
 
